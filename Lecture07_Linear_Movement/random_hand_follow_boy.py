@@ -52,6 +52,7 @@ frame = 0
 run = 1
 hand_on = 1
 x, y, i = 0, 0, 0
+speed =3
 
 xh, yh = random.randrange(0,1280), random.randrange(0,1024)   #손 위치
 xc, yc = TUK_WIDTH // 2, TUK_HEIGHT//2                      #초기 캐릭터 위치
@@ -75,7 +76,7 @@ while alive:
             t = i / 100
             x = (1-t) * xc + t* xh
             y = (1-t) * yc + t* yh
-            i += 1
+            i += 1*speed
             if i > 100:
                 xc, yc = xh, yh
                 hand_on = 0
